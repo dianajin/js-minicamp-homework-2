@@ -79,13 +79,14 @@ function fizzBuzz(num) {
 }
 
 function isPrime(num) {
+    if (num < 2) {
+        return false;
+    }
     for (var i = 2; i < num; i++) {
-        if (num % i !== 0) {
-            return true;
-        } else if (num % i === 0) {
+        if (num % i === 0) {
             return false;
         } 
-    } return false; 
+    } return true;
   //return true if num is prime.
   //otherwise return false
   //hint: a prime number is only evenly divisible by itself and 1
